@@ -1,0 +1,36 @@
+# Binary Search implementation to find the element and the position of the element
+
+def binary_search(lst, target):
+    '''code to find the element and return the index of the element in the given list
+    '''
+    # declaring variables as first and last postions of the list
+    
+    fir = 0
+    last =len(lst)-1
+    # check if the first index value is less than the last
+    # if the element is found at mid_value which is the best case.
+    
+    while fir <= last:
+        mid_value = (fir+last)//2
+        if lst[mid_value] == target:
+            return mid_value
+            
+     # checking if the mid_value is less than target and increment the fir var by 1.      
+        elif lst[mid_value] < target:
+            fir = mid_value + 1
+            
+     # check if the mid_value is greater than the target and decrement last var by 1 
+        else:
+            last = mid_value - 1 
+         
+            
+    return None
+        
+lst = [2,4,6,8,9,12,23]
+result= binary_search(lst, 6)
+print("The position of the element is:", result)
+
+
+        
+        
+
