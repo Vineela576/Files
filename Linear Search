@@ -1,0 +1,18 @@
+import functools
+def linear_seach(lst, target):
+    ''' This function finds the target value if found and returns the index postion, else returns None
+    '''
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    else:
+        return 'None'
+        
+lst = [2,5,16,7,8,6]
+result = linear_seach(lst, 0)
+print(result)
+
+# finding the maximum value in the given list
+
+element = functools.reduce(lambda x,y: x if x>y else y, lst)
+print(element)
